@@ -1,0 +1,28 @@
+.chatSectionInput {
+  display: flex;
+  align-items: center;
+  border: 1px solid lightgray;
+  border-radius: 20px;
+  padding: 10px;
+  background: white;
+}
+
+.chatSectionInput > form {
+  display: flex;
+  flex: 1;
+}
+.chatSectionInput > form > input {
+  flex: 1;
+  border: none;
+  outline: none;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.chatSectionInput > form > button {
+  display: none;
+}
+.chatSectionInput > .MuiSvgIcon-root {
+  color: gray;
+  /* padding: 10px; */
+}
