@@ -10,16 +10,14 @@ import db_url from "./dev.js";
 const app = express();
 const PORT = process.env.PORT || 9000;
 
-//Serve static files css and html
-app.use(express.static("client/build"));
-
 //index.html for other files
 if (process.env.NODE_ENV === "production") {
+  //Serve static files css and html
   app.use(express.static("client/build"));
 
-  app.get("*", (req, res) => {
-    res.sendFile(path.resolve(__dirname, "/client", "build", "index.html"));
-  });
+  // app.get("*", (req, res) => {
+  //   res.sendFile(path.resolve(__dirname, "/client", "build", "index.html"));
+  // });
 }
 
 //Pusher
@@ -35,7 +33,7 @@ const pusher = new Pusher({
 app.use(express.json());
 app.use(cors());
 
-mongoose.connect(db_url, {
+mongoose.connect(process.env.MONGODB_URI || db_url, {
   useCreateIndex: true,
   useNewUrlParser: true,
   useUnifiedTopology: true
