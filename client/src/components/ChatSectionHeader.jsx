@@ -9,8 +9,8 @@ function ChatSectionHeader() {
     <div className="chatSectionHeader">
       <Avatar />
       <div className="chatSectionHeader__info">
-        <h3>Room name</h3>
-        <p>Last seen at ...</p>
+        <h3>General Room</h3>
+        <p>Last active 10 minutes ago ..</p>
       </div>
       <div className="chatSectionHeader__right">
         <IconButton>
