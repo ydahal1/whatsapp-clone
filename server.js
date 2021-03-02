@@ -67,6 +67,7 @@ db.once("open", () => {
 
 //api routes
 // app.get("/", (req, res) => res.status(200).send("Hello world"));
+app.use("/", express.static("public"));
 
 //Send message
 app.post("/messages/new", (req, res) => {
